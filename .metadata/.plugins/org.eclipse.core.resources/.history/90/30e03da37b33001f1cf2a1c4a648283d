@@ -1,0 +1,18 @@
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int[] userValues = new int[9];  // Set of data specified by the user 
+      int nextVal;
+
+      for (int i = 0; i < 9; ++i) {
+    	  nextVal = scnr.nextInt();
+    	  if (nextVal > 0) {
+    		  userValues[i] = nextVal;
+    	  }
+      }
+      
+      System.out.println("Middle item: " + userValues[userValues.length / 2]);
+   }
+}

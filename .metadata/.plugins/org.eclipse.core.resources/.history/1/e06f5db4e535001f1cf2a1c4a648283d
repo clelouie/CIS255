@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class LabProgram {
+   
+   public static int fibonacci(int n) {
+	   int fibValue = 0;
+	   
+      if (n < 0)  {
+    	  return -1;
+      }
+      else {
+    	  for (int i = 0; i <= n; ++i) {
+    		  fibValue += i;
+    		  System.out.print(fibValue + ",");t
+    	  }
+    	  return fibValue;
+      }
+   }
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int startNum;
+      
+      startNum = scnr.nextInt();
+      System.out.println("fibonacci(" + startNum + ") is " + fibonacci(startNum));
+   }
+}

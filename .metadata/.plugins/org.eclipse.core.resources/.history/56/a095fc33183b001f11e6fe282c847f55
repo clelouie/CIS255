@@ -1,0 +1,60 @@
+public class Artwork {
+	private String title;
+	private int yearCreated;
+   
+	private Artist artist;
+
+   // TODO: Define default constructor
+	public Artwork() {
+		title = "unknown";
+		yearCreated = -1;
+	}
+   
+	
+	
+	
+	
+	
+   // TODO: Define get methods: getTitle(), getYearCreated()
+	public String getTitle() {
+		return title;
+	}
+	
+	
+	
+	
+	
+	
+	public int getYearCreated() {
+		return yearCreated;
+	}
+	
+	
+	
+	
+	
+
+   // TODO: Define second constructor to initialize 
+   //       private fields (title, yearCreated, artist)
+	public Artwork(String userTitle, int userYearCreated, Artist userArtist) {
+		title = userTitle;
+		yearCreated = userYearCreated;
+		artist = userArtist;
+
+
+	}
+	
+	
+	
+	
+	
+
+   // TODO: Define printInfo() method
+   //       Call the printInfo() method in Artist.java to print an artist's information                                                                                          
+	public void printInfo() {
+		artist.printInfo();
+		System.out.print("Title: ");
+		System.out.print(title + ", " + yearCreated);
+	}
+
+}

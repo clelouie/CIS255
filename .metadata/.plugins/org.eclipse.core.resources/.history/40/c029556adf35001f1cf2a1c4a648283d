@@ -1,0 +1,48 @@
+/*
+ * Name: Coco Louie
+ * Date: 06/28/24
+ * 
+ * Class: CIS 255
+ * Instructor: David Harden
+ * Lab 6.27: Flip a coin
+ * 
+ * Reads an array of 4 integers from input.
+ * Passes array through method swapValues, 
+ * which swaps the values of index 0 with 1, and 2 with 3.
+ * Outputs new swapped array.
+ */
+
+import java.util.Scanner;
+import java.util.Random;
+
+public class LabProgram {
+	
+	public static String coinFlip(Random rand) {
+		int flip = rand.nextInt(2);
+		String coinSide;
+		
+		if (flip == 1) {
+			coinSide = "Heads";
+		}
+		else {
+			coinSide = "Tails";
+		}
+		
+		return coinSide;
+	}
+	   
+	
+	
+	
+	
+	
+	   public static void main(String[] args) {
+	      Scanner scnr = new Scanner(System.in);
+	      Random rand = new Random(2); // Unique seed
+	      int numFlips = scnr.nextInt();
+	      
+	      for (int i = 0; i < numFlips; ++i) {
+	    	  System.out.println(coinFlip(rand));
+	      }
+	   }
+}

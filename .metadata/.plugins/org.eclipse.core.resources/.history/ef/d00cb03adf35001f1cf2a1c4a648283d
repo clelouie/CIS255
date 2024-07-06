@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class LabProgram {
+	
+	public static String coinFlip(Random rand) {
+		int flip = rand.nextInt(2);
+		String coinSide;
+		
+		if (flip == 1) {
+			coinSide = "Heads";
+		}
+		else {
+			coinSide = "Tails";
+		}
+		
+		return coinSide;
+	}
+	   
+	   public static void main(String[] args) {
+	      Scanner scnr = new Scanner(System.in);
+	      Random rand = new Random(2); // Unique seed
+	      int numFlips = scnr.nextInt();
+	      
+	      for (int i = 0; i < numFlips; ++i) {
+	    	  System.out.println(coinFlip(rand));
+	      }
+	   }
+}

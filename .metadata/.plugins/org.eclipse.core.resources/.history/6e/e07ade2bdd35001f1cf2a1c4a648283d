@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	
+	public static void swapValues(int[] arrayToSwap) {
+		int tempVal;
+		
+		tempVal = arrayToSwap[0];
+		arrayToSwap[0] = arrayToSwap[1];
+		arrayToSwap[1] = tempVal;
+		
+		tempVal = arrayToSwap[2];
+		arrayToSwap[2] = arrayToSwap[3];
+		arrayToSwap[3] = tempVal;
+	}
+	
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		int[] arrayToSwap = new int[4];
+		int i;
+		
+		for (i = 0; i < arrayToSwap.length; ++i) {
+			arrayToSwap[i] = scnr.nextInt();
+		}
+		
+		swapValues(arrayToSwap);
+		
+		for (i = 0; i < arrayToSwap.length; ++i) {
+			System.out.print(arrayToSwap[i] + " ");
+		}
+		
+		System.out.println();
+		
+	}
+
+}

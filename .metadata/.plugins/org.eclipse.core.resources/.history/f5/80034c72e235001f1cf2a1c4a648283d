@@ -1,0 +1,59 @@
+/*
+ * Name: Coco Louie
+ * Date: 06/28/24
+ * 
+ * Class: CIS 255
+ * Instructor: David Harden
+ * Lab 6.28: Sort an array
+ * 
+ * Reads integer numFlips from input, 
+ * indicating the number of coin flips to perform.
+ * Calls method coinFlip numFlips times and outputs results.
+ */
+
+import java.util.Scanner;
+
+public class LabProgram {
+	
+	public static void sortArray(int[] arrayToSort, int numVals) {
+		int tempVal;
+		
+		for (int i = 0; i < numVals; ++i) {
+			for (int j = 0; j < numVals; ++j) {
+				if (arrayToSort[i] < arrayToSort[i + 1]) {
+					tempVal = arrayToSort[i];
+					arrayToSort[i] = arrayToSort[i + 1];
+					arrayToSort[i + 1] = tempVal;
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+	
+
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		int numVals;
+		int[] userArray = new int[20];
+		int i;
+		
+		numVals = scnr.nextInt();
+		
+		for (i = 0; i < numVals; ++i) {
+			userArray[i] = scnr.nextInt();
+		}
+		
+		sortArray(userArray, numVals);
+		
+		for (i = 0; i < numVals; ++i) {
+			System.out.print(userArray[i] + ",");
+		}
+		
+		System.out.println();
+
+	}
+
+}

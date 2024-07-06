@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class LabProgram {
+	
+	public static int getWordFrequency(String[] wordsList, int listSize, String currWord) {
+		int freq = 0;
+		
+		for (int i = 0; i < listSize - 1; ++i) {
+			if (wordsList[i].equalsIgnoreCase(currWord)) {
+				++freq;
+			}
+		}
+		
+		return freq;
+	}
+
+	public static void main(String[] args) {
+		Scanner scnr = new Scanner(System.in);
+		
+		
+
+	}
+
+}
