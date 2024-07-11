@@ -3,7 +3,7 @@ Coco Louie
 CIS 255
 Dave Harden
 06/19/2024
-Lab 6 - LabProgram.Java
+3.27 LAB: Login name
 Program to convert user inputted firstName, lastName, and digits (four-digit integer).
 Calculates lastDigit of digits using %.
 First determines if firstName is less than 6 letters. If true, uses all letters.
